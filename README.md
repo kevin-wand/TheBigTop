@@ -1,10 +1,7 @@
-# Project Overview
+# The Big Top
 
-## Project Name
-The Big Top
-
-## Project Description
-User enters a location (city,state) and complete search with one butten click to find events by category.
+## Description
+User enters a location (Postal Code) and complete search with one button click to find events by category.
 
 The first result will display the largest image and most detail, additional events will step down in detail.
 
@@ -14,9 +11,9 @@ Technologies used :html: :css: :javascript:
 
 - Ticketmaster 
 
-  - [Ticketmaster DevTools Link](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/)
+  - [Ticketmaster API Docs](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/)
 
-  - Search Parameters: `events.json?postalCode=10001&classification=music&apikey=${apikey}`
+  - Search API Endpoint & Parameters: `events.json?postalCode=10001&classification=music&apikey=${apikey}`
 
 ```json
 {
@@ -61,9 +58,11 @@ Technologies used :html: :css: :javascript:
 ## MVP/PostMVP
 
 ### MVP 
-- Create a "geosearch" and display results for local events by genre
-- Responsive design for both before & after search results
-- Differentiate the image sizing and detail for the search results
+- Create a location based search
+- Grouping search results by event categories (concerts, sports, arts, family, etc.)
+- Display multiple images from location search results
+- Create modal for category results
+- Reset search results for new search
 
 ### PostMVP  
 Functionality
@@ -105,23 +104,22 @@ Aesthetic
 | Project Overview | H        | 2.0 hrs        | 1.5 hrs      | 0.0 hrs      |
 | JS Pseudocode | H        | 1.0 hrs        | 0.0 hrs      | 0.0 hrs      |
 | HTML structure | H        | 1.0 hrs        | 0.0 hrs      | 0.0 hrs      |
-| CSS Framework | H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      |
-| CSS Search Results:Before Mobile | H        | 2.0 hrs        | 0.0 hrs      | 0.0 hrs      |
+| CSS Search Results:Before Mobile | H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      |
 | CSS Search Results:After Mobile | H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      |
-| CSS Search Results:Before Desktop | H        | 2.0 hrs        | 0.0 hrs      | 0.0 hrs      |
+| CSS Search Results:Before Desktop | H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      |
 | CSS Search Results:After Desktop | H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      |
-| JS User Input | H        | 0.5 hrs        | 0.0 hrs      | 0.0 hrs      |
-| JS Event Listener | H        | 0.5 hrs        | 0.0 hrs      | 0.0 hrs      |
+| JS Search Functionality | H        | 1.5 hrs        | 0.0 hrs      | 0.0 hrs      |
+| JS Event Listeners | H        | 1.5 hrs        | 0.0 hrs      | 0.0 hrs      |
 | JS API Request | H        | 1.5 hrs        | 0.0 hrs      | 0.0 hrs      |
-| JS Filter search results for location | H        | 2.0 hrs        | 0.0 hrs      | 0.0 hrs      |
-| JS Filter search results for category | H        | 2.0 hrs        | 0.0 hrs      | 0.0 hrs      |
+| JS Filter search results for location | H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      |
+| JS Filter search results for category | H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      |
 | JS Create containers & append data | H        | 1.5 hrs        | 0.0 hrs      | 0.0 hrs      |
-| JS Transition search query to search results | H        | 1.5 hrs        | 0.0 hrs      | 0.0 hrs      |
+| JS/CSS Modal creation | H        | 2.5 hrs        | 0.0 hrs      | 0.0 hrs      |
 | JS Display results & images | H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      |
 | JS Remove previous results | H        | 1.0 hrs        | 0.0 hrs      | 0.0 hrs      |
 | CSS Advanced Effects | L        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      |
 | Presentation Prep | M        | 1.0 hrs        | 0.0 hrs      | 0.0 hrs      |
-| **Total** | ---      | **38.5 hrs**        | **0.0 hrs**     | **0.0 hrs**      |
+| **Total** | ---      | **42.5 hrs**        | **0.0 hrs**     | **0.0 hrs**      |
 
 
 ## Code Snippet
