@@ -103,7 +103,7 @@ Aesthetic
 | H        | 1.0 hrs        | 2.0 hrs      | 0.0 hrs      | Wireframe | 100%
 | H        | 2.0 hrs        | 1.5 hrs      | 0.0 hrs      | Project Overview | 100%
 | H        | 1.0 hrs        | 0.0 hrs      | 0.0 hrs      | JS Pseudocode | 80%
-| H        | 1.0 hrs        | 0.0 hrs      | 0.0 hrs      | HTML structure | 80% complete
+| H        | 1.0 hrs        | 0.0 hrs      | 0.0 hrs      | HTML structure | 80%
 | H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      | CSS Search Results:Before Mobile | 50%
 | H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      | CSS Search Results:After Mobile | 50%
 | H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      | CSS Search Results:Before Desktop | 50%
@@ -111,12 +111,12 @@ Aesthetic
 | H        | 1.5 hrs        | 0.0 hrs      | 0.0 hrs      | JS Search Functionality | 90%
 | H        | 1.5 hrs        | 0.0 hrs      | 0.0 hrs      | JS Event Listeners | 100%
 | H        | 1.5 hrs        | 0.0 hrs      | 0.0 hrs      | JS API Request | 100%
-| H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      | JS Filter search results for location | 90% for mvp
+| H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      | JS Filter search results for location | 90%
 | H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      | JS Filter search results for category | 100%
 | H        | 1.5 hrs        | 0.0 hrs      | 0.0 hrs      | JS Create containers & append data | 100%
-| H        | 2.5 hrs        | 0.0 hrs      | 0.0 hrs      | JS/CSS Modal creation | 0%
+| H        | 2.5 hrs        | 0.0 hrs      | 0.0 hrs      | JS/CSS Modal creation | 20%
 | H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      | JS Display results & images | 50%
-| H        | 1.0 hrs        | 0.0 hrs      | 0.0 hrs      | JS Remove previous results | 0%
+| H        | 1.0 hrs        | 0.0 hrs      | 0.0 hrs      | JS Remove previous results | 100%
 | L        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      | CSS Advanced Effects |
 | M        | 1.0 hrs        | 0.0 hrs      | 0.0 hrs      | Presentation Prep |
 | ---      | **42.5 hrs**        | **0.0 hrs**     | **0.0 hrs**      | **Total** |
