@@ -33,9 +33,8 @@ btnSubmit.addEventListener("click", (e) => {
     // console.log("value is null")
     return
   }
-  // const userValue = 'NY' // test value
-  const urlConcat = `${BASE_URL}&${DISCOVERY}=${userValue}`;
 
+  const urlConcat = `${BASE_URL}&${DISCOVERY}=${userValue}`;
   const searchSize = "9"; // default size is 20
   const urlMusic = `${urlConcat}&classificationName=${genreMusic}&size=${searchSize}`;
   const urlSport = `${urlConcat}&classificationName=${genreSport}&size=${searchSize}`;
@@ -114,7 +113,6 @@ btnSubmit.addEventListener("click", (e) => {
 btnMusic.addEventListener("click", () => {
   const userLocation = document.querySelector("#user-input-location");
   const userValue = userLocation.value;
-  // const userValue = 'NY' // test value
   const urlConcat = `${BASE_URL}&${DISCOVERY}=${userValue}`;
 
   const searchSize = "9"; // default size is 20
@@ -129,7 +127,6 @@ btnMusic.addEventListener("click", () => {
       const moreInfo = await axios.get(urlMusic);
 
       let attachResults = moreInfo.data._embedded.events;
-
       attachResults.forEach((result) => {
         let appendToResultGrid = `
         <ul class="result-card">
@@ -159,12 +156,10 @@ btnMusic.addEventListener("click", () => {
 btnSport.addEventListener("click", () => {
   const userLocation = document.querySelector("#user-input-location");
   const userValue = userLocation.value;
-  // const userValue = 'NY' // test value
   const urlConcat = `${BASE_URL}&${DISCOVERY}=${userValue}`;
-
   const searchSize = "9"; // default size is 20
-  const urlSport = `${urlConcat}&classificationName=${genreSport}&size=${searchSize}`;
 
+  const urlSport = `${urlConcat}&classificationName=${genreSport}&size=${searchSize}`;
   displayMoreInfo();
 
   async function displayMoreInfo() {
@@ -172,7 +167,6 @@ btnSport.addEventListener("click", () => {
       const moreInfo = await axios.get(urlSport);
 
       let attachResults = moreInfo.data._embedded.events;
-
       attachResults.forEach((result) => {
         let appendToResultGrid = `
         <ul class="result-card">
@@ -203,10 +197,9 @@ btnSport.addEventListener("click", () => {
 btnMisc.addEventListener("click", () => {
   const userLocation = document.querySelector("#user-input-location");
   const userValue = userLocation.value;
-  // const userValue = 'NY' // test value
   const urlConcat = `${BASE_URL}&${DISCOVERY}=${userValue}`;
-
   const searchSize = "9"; // default size is 20
+
   const urlMisc = `${urlConcat}&classificationName=${genreMisc}&size=${searchSize}`;
   displayMoreInfo();
 
@@ -215,7 +208,6 @@ btnMisc.addEventListener("click", () => {
       const moreInfo = await axios.get(urlMisc);
 
       let attachResults = moreInfo.data._embedded.events;
-
       attachResults.forEach((result) => {
         let appendToResultGrid = `
         <ul class="result-card">
@@ -255,7 +247,6 @@ btnIndividual.addEventListener("click", () => {
 
   async function displayMoreInfo() {
     try {
-      // clearResults(attachResults)
 
       const moreInfo = await axios.get(urlIndividual);
 
