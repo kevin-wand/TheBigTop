@@ -70,7 +70,7 @@ Functionality
 - Follow up search bar vs search reset
 - Page options and expanded search results
 
-Resourcefulness
+Utility
 - Use this to search for nearby places of interest by event
 - Create an itinerary search for a selected event
 
@@ -86,8 +86,8 @@ Aesthetic
 |May 14| Complete | API Research / Wireframes 
 |May 15| Complete | Wireframes 
 |May 16| Complete | Project Overview / Schedule / Priority Matrix
-|May 17| Pending | Project Approval / JS Pseudocode
-|May 18| Pending | Core Code & CSS Pt 1
+|May 17| Approval 100% - Pseudocode 75% | Project Approval / JS Pseudocode
+|May 18| Core Code 20% CSS 10% | Core Code & CSS Pt 1
 |May 19| Pending | MVP & CSS Pt 2
 |May 20| Pending | Fine Tuning
 |May 21| Pending | Presentation
@@ -97,29 +97,29 @@ Aesthetic
 
 ## Timeframes
 
-| Component | Priority | Estimated Time | Time Invested | Actual Time |
-| ---     | :---:    |  :---:         |  :---:        | :---:       |
-| API Research | H        | 3.0 hrs        | 2.0 hrs      | 0.0 hrs      |
-| Wireframe | H        | 1.0 hrs        | 2.0 hrs      | 0.0 hrs      |
-| Project Overview | H        | 2.0 hrs        | 1.5 hrs      | 0.0 hrs      |
-| JS Pseudocode | H        | 1.0 hrs        | 0.0 hrs      | 0.0 hrs      |
-| HTML structure | H        | 1.0 hrs        | 0.0 hrs      | 0.0 hrs      |
-| CSS Search Results:Before Mobile | H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      |
-| CSS Search Results:After Mobile | H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      |
-| CSS Search Results:Before Desktop | H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      |
-| CSS Search Results:After Desktop | H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      |
-| JS Search Functionality | H        | 1.5 hrs        | 0.0 hrs      | 0.0 hrs      |
-| JS Event Listeners | H        | 1.5 hrs        | 0.0 hrs      | 0.0 hrs      |
-| JS API Request | H        | 1.5 hrs        | 0.0 hrs      | 0.0 hrs      |
-| JS Filter search results for location | H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      |
-| JS Filter search results for category | H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      |
-| JS Create containers & append data | H        | 1.5 hrs        | 0.0 hrs      | 0.0 hrs      |
-| JS/CSS Modal creation | H        | 2.5 hrs        | 0.0 hrs      | 0.0 hrs      |
-| JS Display results & images | H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      |
-| JS Remove previous results | H        | 1.0 hrs        | 0.0 hrs      | 0.0 hrs      |
-| CSS Advanced Effects | L        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      |
-| Presentation Prep | M        | 1.0 hrs        | 0.0 hrs      | 0.0 hrs      |
-| **Total** | ---      | **42.5 hrs**        | **0.0 hrs**     | **0.0 hrs**      |
+| Priority | Estimated Time | Time Invested | Actual Time | Component | Status |
+| :---:    |  :---:         |  :---:        | :---:       | ---     | :---: |
+| H        | 3.0 hrs        | 2.0 hrs      | 0.0 hrs      | API Research | 100%
+| H        | 1.0 hrs        | 2.0 hrs      | 0.0 hrs      | Wireframe | 100%
+| H        | 2.0 hrs        | 1.5 hrs      | 0.0 hrs      | Project Overview | 100%
+| H        | 1.0 hrs        | 0.0 hrs      | 0.0 hrs      | JS Pseudocode | 80%
+| H        | 1.0 hrs        | 0.0 hrs      | 0.0 hrs      | HTML structure | 80% complete
+| H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      | CSS Search Results:Before Mobile | 50%
+| H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      | CSS Search Results:After Mobile | 50%
+| H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      | CSS Search Results:Before Desktop | 50%
+| H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      | CSS Search Results:After Desktop | 50%
+| H        | 1.5 hrs        | 0.0 hrs      | 0.0 hrs      | JS Search Functionality | 90%
+| H        | 1.5 hrs        | 0.0 hrs      | 0.0 hrs      | JS Event Listeners | 100%
+| H        | 1.5 hrs        | 0.0 hrs      | 0.0 hrs      | JS API Request | 100%
+| H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      | JS Filter search results for location | 90% for mvp
+| H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      | JS Filter search results for category | 100%
+| H        | 1.5 hrs        | 0.0 hrs      | 0.0 hrs      | JS Create containers & append data | 100%
+| H        | 2.5 hrs        | 0.0 hrs      | 0.0 hrs      | JS/CSS Modal creation | 0%
+| H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      | JS Display results & images | 50%
+| H        | 1.0 hrs        | 0.0 hrs      | 0.0 hrs      | JS Remove previous results | 0%
+| L        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      | CSS Advanced Effects |
+| M        | 1.0 hrs        | 0.0 hrs      | 0.0 hrs      | Presentation Prep |
+| ---      | **42.5 hrs**        | **0.0 hrs**     | **0.0 hrs**      | **Total** |
 
 
 ## Code Snippet

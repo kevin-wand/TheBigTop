@@ -1,0 +1,83 @@
+/* Search Container */
+
+/* Search Wrapper */
+
+
+/* Search Grid Containers */
+
+
+/* Search Grid Buttons */
+
+/* Pictures */
+/* #picMusic, #picSport, #picMisc, #picIndividual{
+  display: grid;
+  position: fixed;
+  width: 200px;
+  height: auto;
+  top: 20%;
+}
+
+#btnMusic, #btnSport, #btnMisc, #btnIndividual {
+  display: grid;
+  position: fixed;
+  top: 20%;
+  opacity: 50%;
+} */
+
+
+.search-container {
+  border: 0px solid black;
+}
+
+.search-grid {
+  /* background-color:blueviolet; */
+  display: grid;
+  grid-template-columns: repeat(4, 20vw);
+  grid-template-rows: repeat(1, 40vh);
+  justify-content: center;
+  align-items: start;
+  gap: 0px 10px;
+  padding: 0px 5px;
+}
+
+.search-card, .search-btn, .search-pic {
+  width: 20vw;
+  height: 40vh;
+  padding: 0px;
+}
+
+.search-card {
+  position: relative;
+}
+
+.search-btn {
+  background-color: aquamarine;
+  position: absolute;
+  z-index: 3;
+  opacity: 70%; /* hover function make it go from 0% opacity to 70% opacity */
+}
+
+.search-pic {
+  position: absolute;
+  z-index: 1;
+}
+
+
+/* #music {
+  background-color: red;
+}
+#sport {
+  background-color: green;
+}
+#misc {
+  background-color: blue;
+}
+#individual {
+  background-color: yellow;
+}
+
+#btnMusic, #btnSport, #btnMisc, #btnIndividual {
+
+} */
+
+
