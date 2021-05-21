@@ -1,5 +1,6 @@
 // ============ DECLARING GLOBAL VARIABLES ==============
 
+// Defining variables for the API query and setting the classification categories to search and display events from.
 const SEARCH = "events";
 const DISCOVERY = "stateCode";
 const CITY = "city";
@@ -23,6 +24,7 @@ const catIndividual = document.querySelector(".individual");
 
 // ============ EVENT LISTENER - SEARCH RESULTS ==============
 
+// Prompt to user for location values and present initial search results. Additional results detailed below. 
 form.addEventListener("submit", (e) => {
   e.preventDefault()
 
@@ -51,6 +53,7 @@ form.addEventListener("submit", (e) => {
   const urlIndividual = `${urlConcat}&classificationName=${genreIndividual}&size=${searchSize}`;
   getLocation();
   
+// Multiple API requests within one try/catch block. Perform a forEach loop on the requested data in order to append to DOM.
   async function getLocation() {
     try {
       const musicQ = await axios.get(urlMusic);
@@ -63,7 +66,7 @@ form.addEventListener("submit", (e) => {
       let individualResults = individualQ.data._embedded.events;
       
       musicResults.forEach((result) => {
-        musicList = `
+        const musicList = `
         <li class="list-search">${result.name}</li>
         <li class="list-search">${result.dates.start.localDate}</li>
         `;
@@ -72,7 +75,7 @@ form.addEventListener("submit", (e) => {
         .insertAdjacentHTML("afterbegin", musicList);
       });
       sportResults.forEach((result) => {
-        sportList = `
+        const sportList = `
         <li class="list-search">${result.name}</li>
         <li class="list-search">${result.dates.start.localDate}</li>
         `;
@@ -81,7 +84,7 @@ form.addEventListener("submit", (e) => {
         .insertAdjacentHTML("afterbegin", sportList);
       });
       miscResults.forEach((result) => {
-        miscList = `
+        const miscList = `
         <li class="list-search">${result.name}</li>
         <li class="list-search">${result.dates.start.localDate}</li>
         `;
@@ -90,7 +93,7 @@ form.addEventListener("submit", (e) => {
         .insertAdjacentHTML("afterbegin", miscList);
       });
       individualResults.forEach((result) => {
-        individualList = `
+        const individualList = `
         <li class="list-search">${result.name}</li>
         <li class="list-search">${result.dates.start.localDate}</li>
         `;
@@ -100,12 +103,22 @@ form.addEventListener("submit", (e) => {
         
       });
     } catch (error) {
+      // Error messages displayed for invalid search results.
+      const musicList = `Invalid Search`;
+      document.querySelector('.music').insertAdjacentHTML("afterbegin", musicList);
+      const sportList = `Invalid Search`;
+      document.querySelector('.sport').insertAdjacentHTML("afterbegin", sportList);
+      const miscList = `Invalid Search`;
+      document.querySelector('.misc').insertAdjacentHTML("afterbegin", miscList);
+      const individualList = `Invalid Search`;
+      document.querySelector('.individual').insertAdjacentHTML("afterbegin", individualList);
       console.error(error);
     }
   }
 });
 
 // ============ EVENT LISTENER - DISPLAY MORE DETAIL ==============
+// Provide additional event details for selected category. Results displayed in a modal.
 
 // DETAIL - MUSIC
 catMusic.addEventListener('click', (e) => {
@@ -328,7 +341,8 @@ catIndividual.addEventListener('click', (e) => {
 });
 
 // ========================== REMOVE PREVIOUS ELEMENTS =======================
-  
+// Removing previous search results before appending new results to DOM.
+
 function removePrevious(parentElement) {
   while (parentElement.lastChild) {
     parentElement.removeChild(parentElement.lastChild)
@@ -336,7 +350,8 @@ function removePrevious(parentElement) {
 }
   
 // ============================= MODAL CLICKS ================================
-  
+// Functionality for opening and closing the additional event detail modal.
+
 const modalClick = document.querySelector('.result-container')
 const overlayClick = document.querySelector('.overlay')
 
