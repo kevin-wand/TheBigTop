@@ -21,6 +21,11 @@
     "title title title"
     "search search search";
   grid-area: header;
+  background: #AFC7CE;
+  background: -moz-linear-gradient(135deg, #0C58C5 0%, #69A48E 50%, #AFC7CE 100%);
+  background: -webkit-linear-gradient(135deg, #0C58C5 0%, #69A48E 50%, #AFC7CE 100%);
+  background: linear-gradient(135deg, #0C58C5 0%, #69A48E 50%, #AFC7CE 100%);
+
 }
 
 .title { 

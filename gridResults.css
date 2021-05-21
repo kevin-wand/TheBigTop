@@ -24,9 +24,8 @@
     display: block;
     padding-top: 7px;
     padding-bottom: 7px;
-    top: 55%;
     gap: 10px;
-    transform: translate(-45%, -85%);
+    transform: translate(-45%, -75%);
   }
 }
 
@@ -92,8 +91,14 @@
   font-size: .85rem;
 }
 
-#event-date:hover, #event-time:hover, #price-range:hover, #ticketmaster:hover { 
+#event-date:hover, #event-time:hover, #price-range:hover { 
   background: rgba(0, 0, 0, 0.612);
+  cursor: auto;
+}
+
+##ticketmaster:hover { 
+  background: rgba(0, 0, 0, 0.612);
+  cursor: pointer;
 }
 
 .list-result {
