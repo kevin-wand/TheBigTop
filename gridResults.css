@@ -1,42 +1,52 @@
-#result-container {
+.overlay {
+  background-color: rgba(0,0,0,0.5);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 60;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.result-container {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 200ms ease-in-out;
-  /* border: 0px solid black; */
+  transform: translate(-50%, -50%) scale(0);
   border-radius: 10px;
-  z-index: 7;
-  background: rgba(f,f,f,0);
+  z-index: 70;
+  background: rgba(f,f,f,1);
   width: 80%;
   min-width: 300px;
   display: grid;
   grid-template-columns: minmax(185px, 30vw) minmax(185px, 30vw) minmax(185px, 30vw);
   grid-template-rows: minmax(185px, 20vh) minmax(185px, 20vh) minmax(185px, 20vh);
   gap: 2px 1px;
+}
 
+.result-container.active {
+  transform: translate(-50%, -50%) scale(1);
 }
 
 @media screen and (max-width: 690px) {
   #result-container {
-    position: sticky;
+    position: absolute;
     width: 300px;
     display: block;
     padding-top: 7px;
     padding-bottom: 7px;
     gap: 10px;
-    transform: translate(-45%, -75%);
+    transform: translate(-35%, -45%);
   }
 }
 
-.popup {
-  display: none;
-}
-.popup::before {
-  display: auto;
-  /* transform: translate(-50%, -50%) scale(0); */
-  /* border: 1px solid black; */
-}
 
 .result-card {
   background: rgba(0, 0, 0, 0.85);
@@ -56,9 +66,15 @@
   grid-area: 1 / 1 / 2 / 4; 
   background: rgba(0, 0, 0, 0.612);
   height: 5vh;
-  font-size: .95rem;
+  font-size: .9rem;
   padding-top: 5px;
   padding-left: 5px;
+}
+
+@media screen and (max-width: 960px) {
+  #event-name { 
+    font-size: .75rem;
+  }
 }
 
 #event-date { 
@@ -96,7 +112,7 @@
   cursor: auto;
 }
 
-##ticketmaster:hover { 
+#ticketmaster:hover { 
   background: rgba(0, 0, 0, 0.612);
   cursor: pointer;
 }

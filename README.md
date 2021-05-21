@@ -97,34 +97,45 @@ Aesthetic
 
 ## Timeframes
 
-| Priority | Estimated Time | Time Invested | Actual Time | Component | Status |
-| :---:    |  :---:         |  :---:        | :---:       | ---     | :---: |
-| H        | 3.0 hrs        | 2.0 hrs      | 0.0 hrs      | API Research | 100%
-| H        | 1.0 hrs        | 2.0 hrs      | 0.0 hrs      | Wireframe | 100%
-| H        | 2.0 hrs        | 1.5 hrs      | 0.0 hrs      | Project Overview | 100%
-| H        | 1.0 hrs        | 0.0 hrs      | 0.0 hrs      | JS Pseudocode | 80%
-| H        | 1.0 hrs        | 0.0 hrs      | 0.0 hrs      | HTML structure | 80%
-| H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      | CSS Search Results:Before Mobile | 50%
-| H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      | CSS Search Results:After Mobile | 50%
-| H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      | CSS Search Results:Before Desktop | 50%
-| H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      | CSS Search Results:After Desktop | 50%
-| H        | 1.5 hrs        | 0.0 hrs      | 0.0 hrs      | JS Search Functionality | 90%
-| H        | 1.5 hrs        | 0.0 hrs      | 0.0 hrs      | JS Event Listeners | 100%
-| H        | 1.5 hrs        | 0.0 hrs      | 0.0 hrs      | JS API Request | 100%
-| H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      | JS Filter search results for location | 90%
-| H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      | JS Filter search results for category | 100%
-| H        | 1.5 hrs        | 0.0 hrs      | 0.0 hrs      | JS Create containers & append data | 100%
-| H        | 2.5 hrs        | 0.0 hrs      | 0.0 hrs      | JS/CSS Modal creation | 20%
-| H        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      | JS Display results & images | 50%
-| H        | 1.0 hrs        | 0.0 hrs      | 0.0 hrs      | JS Remove previous results | 100%
-| L        | 3.0 hrs        | 0.0 hrs      | 0.0 hrs      | CSS Advanced Effects |
-| M        | 1.0 hrs        | 0.0 hrs      | 0.0 hrs      | Presentation Prep |
-| ---      | **42.5 hrs**        | **0.0 hrs**     | **0.0 hrs**      | **Total** |
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
+| --- | :---:    |  :---:         |  :---:        | :---:       |
+| API Research | H        | 3.0 hrs        | 3.0 hrs      | 3.0 hrs      |
+| Wireframe | H        | 1.0 hrs        | 2.5 hrs      | 2.5 hrs      |
+| Project Overview | H        | 2.0 hrs        | 2.0 hrs      | 2.0 hrs      |
+| JS Pseudocode | H        | 1.0 hrs        | 1.0 hrs      | 1.0 hrs      |
+| HTML structure | H        | 1.0 hrs        | 1.0 hrs      | 1.0 hrs      |
+| CSS Search Results:Before Mobile | H        | 3.0 hrs        | 4.0 hrs      | 4.0 hrs      |
+| CSS Search Results:After Mobile | H        | 3.0 hrs        | 3.0 hrs      | 3.0 hrs      |
+| CSS Search Results:Before Desktop | H        | 3.0 hrs        | 5.0 hrs      | 5.0 hrs      |
+| CSS Search Results:After Desktop | H        | 3.0 hrs        | 3.0 hrs      | 3.0 hrs      |
+| JS Search Functionality | H        | 1.5 hrs        | 3.0 hrs      | 3.0 hrs      |
+| JS Event Listeners | H        | 1.5 hrs        | 2.0 hrs      | 2.0 hrs      |
+| JS API Request | H        | 1.5 hrs        | 2.0 hrs      | 2.0 hrs      |
+| JS Filter search results for location | H        | 3.0 hrs        | 2.0 hrs      | 2.0 hrs      |
+| JS Filter search results for category | H        | 3.0 hrs        | 2.0 hrs      | 2.0 hrs      |
+| JS Create containers & append data | H        | 1.5 hrs        | 3.0 hrs      | 3.0 hrs      |
+| JS/CSS Modal creation | H        | 2.5 hrs        | 3.5 hrs      | 3.5 hrs      |
+| JS Display results & images | H        | 3.0 hrs        | 2.0 hrs      | 2.0 hrs      |
+| JS Remove previous results | H        | 1.0 hrs        | 2.0 hrs      | 2.0 hrs      |
+| CSS Advanced Effects | L        | 3.0 hrs        | 2.0 hrs      | 2.0 hrs      |
+| Presentation Prep | M        | 1.0 hrs        | 0.5 hrs      | 0.5 hrs      |
+| **Total** | ---      | **42.5 hrs**        | **48.5 hrs**     | **48.5 hrs**      |
 
 
 ## Code Snippet
+Enjoyed finding a solution to filter and search for nested data within an array of results
 
 ```
+  attachResults.forEach((result) => {
+    const imageUrl = result.images.find((image) => image.url.substring(image.url.length - 19) === 'ARTIST_PAGE_3_2.jpg')
+    const backgroundUrl = imageUrl.url
+    
+    let priceResults = ''
+    if (result.priceRanges === undefined) {
+        priceResults = "Tickets TBA"
+      } else {
+        priceResults = `Tickets from $${Math.floor(result.priceRanges[0].min)} to $${Math.floor(result.priceRanges[0].max)}`
+      }
 
 ```
 

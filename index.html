@@ -18,22 +18,22 @@
     
     <div class="grid-container">
       <div class="header">
-        <div class="title">The Big Top</div>
+        <div class="title">Event Finder</div>
         <form class="search">
-            <!-- <input type="text" id="user-input-location" placeholder="Search by Location" required> -->
-            <input type="text" id="user-input-location" value="NY" required>
-            <button type="reset">Reset Search</button>
-            <button type="submit" id="location-confirm">Submit</button>
+            <input type="text" id="user-input-location" placeholder="State" required>
+            <input type="text" id="user-city-location" placeholder="City" required>
+            <button type="reset" class="reset">Reset Search</button>
+            <button type="submit" class="submit" id="location-confirm">Submit</button>
         </form>
       </div>
       <div class="main-body">
-        <div class="music"></div>
+        <div class="music">Concerts</div>
           <img class="search-pic" id="pic-music" src="">
-        <div class="sport"></div>
+        <div class="sport">Sports</div>
           <img class="search-pic" id="pic-sport" src="">
-        <div class="misc"></div>
+        <div class="misc">Special Events</div>
           <img class="search-pic" id="pic-misc" src="">
-        <div class="individual"></div>
+        <div class="individual">Group Outings</div>
           <img class="search-pic" id="pic-individual" src="">
       </div>
       <div class="sidebar"></div>      
@@ -41,11 +41,9 @@
     </div>
 
     <div class="modal" id="modal">
-      <!-- <div class="modal-header"> -->
-        <div id="result-container"></div>
-      <!-- </div> -->
+        <div class="result-container" id="result-container"></div>
     </div>
 
-    <div id="overlay"></div>
+    <div class="overlay" id="overlay"></div>
   </body>
 </html>

@@ -1,4 +1,92 @@
 body {
+  /* font-family: 'Playfair Display', serif; */
+  font-family: 'BioRhyme', serif;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 0.5fr);
+  gap: 0px 0px;
+  grid-template-areas:
+    "title title title"
+    "search search search";
+  grid-area: header;
+  background: #AFC7CE;
+  background: -moz-linear-gradient(135deg, #d81818 0%, #CB9468 75%, #E2F029 100%);
+  background: -webkit-linear-gradient(135deg, #d81818 0%, #CB9468 75%, #E2F029 100%);
+  background: linear-gradient(135deg, #d81818 0%, #CB9468 75%, #E2F029 100%);
+
+}
+
+.title { 
+  grid-area: title; 
+  font-size: 2.5rem;
+  align-self: center;
+}
+
+.search { 
+  grid-area: search; 
   font-family: 'Playfair Display', serif;
 }
 
+form {
+  display: grid;
+  grid-template-areas: 
+  ". . . . . . . . "
+  "user-city . . . . . . . "
+  "user-city . reset . . . . . "
+  "user-city . . . . . . . "
+  ". . . . . . . . "
+  ". . . . . . . . "
+  ". . . . . . . . "
+  "user-state . . . . . . . "
+  "user-state . submit . . . . . "
+  "user-state . submit . . . . . "
+  ". . . . . . . . ";
+}
+
+.user-city {
+  grid-area: user-city;
+  border-radius: 3px;
+  padding-left: 5px;
+  margin-left: 5px;
+}
+
+.user-state {
+  grid-area: user-state;
+  border-radius: 3px;
+  margin-left: 5px;
+  padding-left: 5px;
+}
+
+.reset {
+  grid-area: reset;
+}
+
+.submit {
+  grid-area: submit;
+}
+
+.sidebar { 
+  grid-area: sidebar; 
+  background-image: url('https://images.unsplash.com/photo-1542732935-0750da3c04b5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+  background-repeat: no-repeat;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.find-location { 
+  grid-area: find-location;
+  background: #AFC7CE;
+  background: -moz-linear-gradient(45deg, #E2F029 0%, #CB9468 25%, #d81818 100%);
+  background: -webkit-linear-gradient(45deg, #E2F029 0%, #CB9468 25%, #d81818 100%);
+  background: linear-gradient(45deg, #E2F029 0%, #CB9468 25%, #d81818 100%);
+}
+
+@media screen and (max-width: 800px) {
+  .sidebar{
+    background-size: cover;
+  }
+}

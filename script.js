@@ -2,6 +2,7 @@
 
 const SEARCH = "events";
 const DISCOVERY = "stateCode";
+const CITY = "city";
 const DOMAIN = `https://app.ticketmaster.com/discovery/v2/${SEARCH}.json?`;
 const API_KEY = "8dcrqNGbAz3pZiCLzRV0bxReOgbzOSDW";
 const BASE_URL = `${DOMAIN}apikey=${API_KEY}`;
@@ -13,15 +14,12 @@ const genreMusic = "Music";
 const genreSport = "Sports";
 const genreMisc = "Miscellaneous";
 const genreIndividual = "Individual";
-// const genreArt = 'Arts & Theatre'
-// const genreEvent = 'Event Style'
+// Additional search genres available: 'Arts & Theatre' & 'Event Style'
 
 const catMusic = document.querySelector(".music");
 const catSport = document.querySelector(".sport");
 const catMisc = document.querySelector(".misc");
 const catIndividual = document.querySelector(".individual");
-// const btnArt = document.querySelector('#btnArt')
-// const btnEvent = document.querySelector('#btnEvent')
 
 // ============ EVENT LISTENER - SEARCH RESULTS ==============
 
@@ -39,19 +37,18 @@ form.addEventListener("submit", (e) => {
   
   const userLocation = document.querySelector("#user-input-location");
   const userValue = userLocation.value;
+  const userCity = document.querySelector("#user-city-location");
+  const userCityValue = userCity.value;
   if (userValue === '') {
-    // console.log("value is null")
     return
   }
-  
-  const urlConcat = `${BASE_URL}&${DISCOVERY}=${userValue}`;
+
+  const urlConcat = `${BASE_URL}&${DISCOVERY}=${userValue}&${CITY}=${userCityValue}`;
   const searchSize = "9"; // default size is 20
   const urlMusic = `${urlConcat}&classificationName=${genreMusic}&size=${searchSize}`;
   const urlSport = `${urlConcat}&classificationName=${genreSport}&size=${searchSize}`;
   const urlMisc = `${urlConcat}&classificationName=${genreMisc}&size=${searchSize}`;
   const urlIndividual = `${urlConcat}&classificationName=${genreIndividual}&size=${searchSize}`;
-  // const urlArt = `${urlConcat}&classificationName=${genreArt}&size=${searchSize}`
-  // const urlEvent = `${urlConcat}&classificationName=${genreEvent}&size=${searchSize}`
   getLocation();
   
   async function getLocation() {
@@ -102,7 +99,6 @@ form.addEventListener("submit", (e) => {
         .insertAdjacentHTML("afterbegin", individualList);
         
       });
-      // console.log(musicResults)
     } catch (error) {
       console.error(error);
     }
@@ -119,7 +115,9 @@ catMusic.addEventListener('click', (e) => {
   
   const userLocation = document.querySelector("#user-input-location");
   const userValue = userLocation.value;
-  const urlConcat = `${BASE_URL}&${DISCOVERY}=${userValue}`;
+  const userCity = document.querySelector("#user-city-location");
+  const userCityValue = userCity.value;
+  const urlConcat = `${BASE_URL}&${DISCOVERY}=${userValue}&${CITY}=${userCityValue}`;
   const searchSize = "9"; // default size is 20
   const urlMusic = `${urlConcat}&classificationName=${genreMusic}&size=${searchSize}`;
   
@@ -161,6 +159,7 @@ catMusic.addEventListener('click', (e) => {
       console.error(error);
     }
   }
+  activateModel()
 });
 
 // DETAIL - SPORT
@@ -171,7 +170,9 @@ catSport.addEventListener('click', (e) => {
   
   const userLocation = document.querySelector("#user-input-location");
   const userValue = userLocation.value;
-  const urlConcat = `${BASE_URL}&${DISCOVERY}=${userValue}`;
+  const userCity = document.querySelector("#user-city-location");
+  const userCityValue = userCity.value;
+  const urlConcat = `${BASE_URL}&${DISCOVERY}=${userValue}&${CITY}=${userCityValue}`;
   const searchSize = "9"; // default size is 20
   const urlSport = `${urlConcat}&classificationName=${genreSport}&size=${searchSize}`;
   
@@ -213,6 +214,7 @@ catSport.addEventListener('click', (e) => {
       console.error(error);
     }
   }
+  activateModel()
 });
 
 // DETAIL - MISC
@@ -223,7 +225,9 @@ catMisc.addEventListener('click', (e) => {
   
   const userLocation = document.querySelector("#user-input-location");
   const userValue = userLocation.value;
-  const urlConcat = `${BASE_URL}&${DISCOVERY}=${userValue}`;
+  const userCity = document.querySelector("#user-city-location");
+  const userCityValue = userCity.value;
+  const urlConcat = `${BASE_URL}&${DISCOVERY}=${userValue}&${CITY}=${userCityValue}`;
   const searchSize = "9"; // default size is 20
   const urlMisc = `${urlConcat}&classificationName=${genreMisc}&size=${searchSize}`;
   
@@ -265,6 +269,7 @@ catMisc.addEventListener('click', (e) => {
       console.error(error);
     }
   }
+  activateModel()
 });
 
 // DETAIL - INDIVIDUAL
@@ -275,7 +280,9 @@ catIndividual.addEventListener('click', (e) => {
   
   const userLocation = document.querySelector("#user-input-location");
   const userValue = userLocation.value;
-  const urlConcat = `${BASE_URL}&${DISCOVERY}=${userValue}`;
+  const userCity = document.querySelector("#user-city-location");
+  const userCityValue = userCity.value;
+  const urlConcat = `${BASE_URL}&${DISCOVERY}=${userValue}&${CITY}=${userCityValue}`;
   const searchSize = "9"; // default size is 20
   const urlIndividual = `${urlConcat}&classificationName=${genreIndividual}&size=${searchSize}`;
   
@@ -317,27 +324,36 @@ catIndividual.addEventListener('click', (e) => {
       console.error(error);
     }
   }
+  activateModel()
 });
-  
-  // ========================== REMOVE PREVIOUS ELEMENTS =======================
-  
-  function removePrevious(parentElement) {
-    while (parentElement.lastChild) {
-      parentElement.removeChild(parentElement.lastChild)
-    }
-  }
-  
-  // ========================== MODAL CLICKS =============================
-  
-  const modalClick = document.querySelector('#modal')
-  const lightSwitch = modalClick.classList
-  const modalAction = document.querySelector('#result-container')
 
-  window.addEventListener('click', (e) => {
-    if (e.target !== modalAction) {
-        lightSwitch.toggle('popup')
-    }
-    // else {
-    //     modalClick.classList.add('active')
-    //   }
-    })
+// ========================== REMOVE PREVIOUS ELEMENTS =======================
+  
+function removePrevious(parentElement) {
+  while (parentElement.lastChild) {
+    parentElement.removeChild(parentElement.lastChild)
+  }
+}
+  
+// ============================= MODAL CLICKS ================================
+  
+const modalClick = document.querySelector('.result-container')
+const overlayClick = document.querySelector('.overlay')
+
+function activateModel() {
+  modalClick.classList.add('active')
+  overlayClick.classList.add('active')
+  }
+
+function deactivateModel() {
+    modalClick.classList.remove('active')
+    overlayClick.classList.remove('active')
+  }
+
+overlayClick.addEventListener('click', () => {
+  if (modalClick.classList.contains('active') === true) {
+    deactivateModel()
+  }
+})
+    
+

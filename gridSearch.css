@@ -12,32 +12,6 @@
   position: relative;
 }
 
-.header {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 0.5fr);
-  gap: 0px 0px;
-  grid-template-areas:
-    "title title title"
-    "search search search";
-  grid-area: header;
-  background: #AFC7CE;
-  background: -moz-linear-gradient(135deg, #0C58C5 0%, #69A48E 50%, #AFC7CE 100%);
-  background: -webkit-linear-gradient(135deg, #0C58C5 0%, #69A48E 50%, #AFC7CE 100%);
-  background: linear-gradient(135deg, #0C58C5 0%, #69A48E 50%, #AFC7CE 100%);
-
-}
-
-.title { 
-  grid-area: title; 
-  font-size: 3rem;
-  align-self: center;
-}
-
-.search { 
-  grid-area: search; 
-}
-
 .main-body {
   display: grid;
   grid-template-columns: 1fr 0.5fr 1.5fr;
@@ -58,17 +32,14 @@
 
 .sport {
   grid-area: sport;
-  /* background: url('https://images.unsplash.com/photo-1621274403937-2b169c3ff6df?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1'); */
 }
 
 .misc {
   grid-area: misc; 
-  /* background: url('https://images.unsplash.com/photo-1621354236791-260eed20cbe9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1'); */
 }
 
 .individual {
   grid-area: individual;
-  /* background: url('https://images.unsplash.com/photo-1621351557391-a2efa9cf534e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1'); */
 }
 
 li.list-search {
@@ -76,9 +47,7 @@ li.list-search {
 }
 
 .music, .sport, .misc, .individual {
-  /* object-fit: scale-down; */
   font-size: 0.8rem;
-  /* position: relative; */
   background: rgba(112, 128, 144, 0.8);
   border: 1px solid rgb(51,51,51);
   border-radius: 8px;
@@ -95,33 +64,12 @@ li.list-search {
 }
 
 
-.sidebar { 
-  grid-area: sidebar; 
-  background-image: url('https://images.unsplash.com/photo-1542732935-0750da3c04b5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
-  background-repeat: no-repeat;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-}
-
-.find-location { 
-  grid-area: find-location;
-  background: #AFC7CE;
-  background: -moz-linear-gradient(45deg, #AFC7CE 0%, #69A48E 50%, #0C58C5 100%);
-  background: -webkit-linear-gradient(45deg, #AFC7CE 0%, #69A48E 50%, #0C58C5 100%);
-  background: linear-gradient(45deg, #AFC7CE 0%, #69A48E 50%, #0C58C5 100%);
-}
-
-.sidebar, .find-location {
-  /* width: 40vw;
-  max-width: 40vw; */
-}
-
-/* @media screen and (max-width: 1020px) {
+@media screen and (max-width: 1000px) {
   .music, .sport, .misc, .individual {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
-} */
+}
+
 @media screen and (max-width: 800px) {
   .main-body {
     display: grid;
@@ -137,9 +85,5 @@ li.list-search {
     position: relative;
     padding-right: 5px;
     width: 350px;
-  }
-
-  .sidebar{
-    background-size: cover;
   }
 }
