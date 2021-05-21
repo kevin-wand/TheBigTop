@@ -1,32 +1,112 @@
-.modal {
+#result-container {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: 200ms ease-in-out;
-  border: 1px solid black;
+  /* border: 0px solid black; */
   border-radius: 10px;
   z-index: 7;
-  background-color: white;
+  background: rgba(f,f,f,0);
   width: 80%;
   min-width: 300px;
+  display: grid;
+  grid-template-columns: minmax(185px, 30vw) minmax(185px, 30vw) minmax(185px, 30vw);
+  grid-template-rows: minmax(185px, 20vh) minmax(185px, 20vh) minmax(185px, 20vh);
+  gap: 2px 1px;
+
 }
 
-.result-container {
-  /* background-color: blueviolet; */
+@media screen and (max-width: 690px) {
+  #result-container {
+    position: sticky;
+    width: 300px;
+    display: block;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    top: 55%;
+    gap: 10px;
+    transform: translate(-45%, -85%);
+  }
+}
+
+.popup {
+  display: none;
+}
+.popup::before {
+  display: auto;
+  /* transform: translate(-50%, -50%) scale(0); */
   /* border: 1px solid black; */
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  justify-content: center;
-  gap: 0px 10px;
-  padding: 10px 15px;
 }
 
 .result-card {
-  border: 1px solid black;
-  width: 20rem;
-  height: 8rem;
+  background: rgba(0, 0, 0, 0.85);
+  display: grid;
+  gap: 00px 0px;
+  position: relative;
+  filter: saturate(.4);
+  padding: 2px;
+  border-radius: 5px;
+  z-index: 27;
+  align-content: stretch;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
+#event-name { 
+  grid-area: 1 / 1 / 2 / 4; 
+  background: rgba(0, 0, 0, 0.612);
+  height: 5vh;
+  font-size: .95rem;
+  padding-top: 5px;
+  padding-left: 5px;
+}
 
+#event-date { 
+  grid-area: 4 / 1 / 5 / 2; 
+  padding-left: 4px;
+  align-self: end;
+}
+
+#event-time { 
+  grid-area: 5 / 1 / 6 / 2; 
+  padding-left: 4px;
+  align-self: center;
+}
+
+#price-range { 
+  grid-area: 6 / 1 / 7 / 2; 
+  padding-left: 4px;
+  align-self: start;
+}
+
+#ticketmaster { 
+  grid-area: 6 / 3 / 7 / 4; 
+  align-self: end;
+  justify-self: end;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+
+#event-date, #event-time, #price-range, #ticketmaster { 
+  font-size: .85rem;
+}
+
+#event-date:hover, #event-time:hover, #price-range:hover, #ticketmaster:hover { 
+  background: rgba(0, 0, 0, 0.612);
+}
+
+.list-result {
+  align-content: space-between;
+  font-size: .85rem;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+}
+
+a:link {
+  color: dodgerblue;
+}
+
+a:visited {
+  color: dodgerblue;
+}

@@ -1,83 +1,140 @@
-/* Search Container */
-
-/* Search Wrapper */
-
-
-/* Search Grid Containers */
-
-
-/* Search Grid Buttons */
-
-/* Pictures */
-/* #picMusic, #picSport, #picMisc, #picIndividual{
-  display: grid;
-  position: fixed;
-  width: 200px;
-  height: auto;
-  top: 20%;
-}
-
-#btnMusic, #btnSport, #btnMisc, #btnIndividual {
-  display: grid;
-  position: fixed;
-  top: 20%;
-  opacity: 50%;
-} */
-
-
-.search-container {
-  border: 0px solid black;
-}
-
-.search-grid {
-  /* background-color:blueviolet; */
-  display: grid;
-  grid-template-columns: repeat(4, 20vw);
-  grid-template-rows: repeat(1, 40vh);
-  justify-content: center;
-  align-items: start;
-  gap: 0px 10px;
-  padding: 0px 5px;
-}
-
-.search-card, .search-btn, .search-pic {
-  width: 20vw;
-  height: 40vh;
-  padding: 0px;
-}
-
-.search-card {
+.grid-container {
+  display: inline-grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: minmax(5px, 10px) minmax(185px, 1fr) minmax(185px, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: 0.9fr repeat(2, 1.3fr);
+  gap: 0px 0px;
+  grid-template-areas:
+    "... header header find-location find-location"
+    "... main-body main-body sidebar sidebar"
+    "... main-body main-body sidebar sidebar";
   position: relative;
 }
 
-.search-btn {
-  background-color: aquamarine;
-  position: absolute;
-  z-index: 3;
-  opacity: 70%; /* hover function make it go from 0% opacity to 70% opacity */
+.header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 0.5fr);
+  gap: 0px 0px;
+  grid-template-areas:
+    "title title title"
+    "search search search";
+  grid-area: header;
 }
 
-.search-pic {
-  position: absolute;
-  z-index: 1;
+.title { 
+  grid-area: title; 
+  font-size: 3rem;
+  align-self: center;
+}
+
+.search { 
+  grid-area: search; 
+}
+
+.main-body {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1.5fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 3px 2px;
+  grid-template-areas:
+    "music music sport"
+    "misc misc individual";
+  grid-area: main-body;
+  position: relative;
+  padding-right: 5px;
+  z-index: 5;
+}
+
+.music { 
+  grid-area: music;
+}
+
+.sport {
+  grid-area: sport;
+  /* background: url('https://images.unsplash.com/photo-1621274403937-2b169c3ff6df?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1'); */
+}
+
+.misc {
+  grid-area: misc; 
+  /* background: url('https://images.unsplash.com/photo-1621354236791-260eed20cbe9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1'); */
+}
+
+.individual {
+  grid-area: individual;
+  /* background: url('https://images.unsplash.com/photo-1621351557391-a2efa9cf534e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1'); */
+}
+
+li.list-search {
+  list-style: none;
+}
+
+.music, .sport, .misc, .individual {
+  /* object-fit: scale-down; */
+  font-size: 0.8rem;
+  /* position: relative; */
+  background: rgba(112, 128, 144, 0.8);
+  border: 1px solid rgb(51,51,51);
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  align-items: center;
+  padding-left: 5px;
+  filter: opacity(0.5);
+  z-index: 6;
+}
+
+.music:hover, .sport:hover, .misc:hover, .individual:hover {
+  filter: opacity(1.0);
 }
 
 
-/* #music {
-  background-color: red;
-}
-#sport {
-  background-color: green;
-}
-#misc {
-  background-color: blue;
-}
-#individual {
-  background-color: yellow;
+.sidebar { 
+  grid-area: sidebar; 
+  background-image: url('https://images.unsplash.com/photo-1542732935-0750da3c04b5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+  background-repeat: no-repeat;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
 }
 
-#btnMusic, #btnSport, #btnMisc, #btnIndividual {
+.find-location { 
+  grid-area: find-location;
+  background: #AFC7CE;
+  background: -moz-linear-gradient(45deg, #AFC7CE 0%, #69A48E 50%, #0C58C5 100%);
+  background: -webkit-linear-gradient(45deg, #AFC7CE 0%, #69A48E 50%, #0C58C5 100%);
+  background: linear-gradient(45deg, #AFC7CE 0%, #69A48E 50%, #0C58C5 100%);
+}
 
+.sidebar, .find-location {
+  /* width: 40vw;
+  max-width: 40vw; */
+}
+
+/* @media screen and (max-width: 1020px) {
+  .music, .sport, .misc, .individual {
+    font-size: 0.6rem;
+  }
 } */
+@media screen and (max-width: 800px) {
+  .main-body {
+    display: grid;
+    grid-template-columns: 350px;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 3px 2px;
+    grid-template-areas:
+      "music"
+      "sport"
+      "misc"
+      "individual";
+    grid-area: main-body;
+    position: relative;
+    padding-right: 5px;
+    width: 350px;
+  }
 
-
+  .sidebar{
+    background-size: cover;
+  }
+}

@@ -1,74 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="gridSearch.css">
-  <!-- <link rel="stylesheet" href="searchMedia.css"> -->
-  <link rel="stylesheet" href="gridResults.css">
-  <!-- <link rel="stylesheet" href="resultsMedia.css"> -->
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script defer src="script.js"></script>
-
-  <title>The Big Top</title>
-</head>
-<body>
-  
-  <div class="header-container">
-    <h1>The Big Top</h1>
-    <form>
-      <input type="text" id="user-input-location" placeholder="Search by Location" required>
-      <!-- <input type="text" id="user-input-location" value="NY" required> -->
-      <button id="reset">Reset</button>
-      <button type="submit" id="location-confirm">Submit</button>
-    </form>
-  </div>
-
-  <div class="search-container">
-    <div class="search-grid">
-      
-      <div class="search-card" id="music">
-        <img class="search-pic" id="picMusic" src="https://images.unsplash.com/photo-1505224628533-c4fc42c389e0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1492&q=80">
-        <button class="search-btn" id="btn-music"></button>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=BioRhyme&family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gridSearch.css">
+    <link rel="stylesheet" href="gridResults.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="script.js"></script>
+    
+    <title>The Big Top</title>
+  </head>
+  <body>
+    
+    <div class="grid-container">
+      <div class="header">
+        <div class="title">The Big Top</div>
+        <form class="search">
+            <!-- <input type="text" id="user-input-location" placeholder="Search by Location" required> -->
+            <input type="text" id="user-input-location" value="NY" required>
+            <button type="reset">Reset Search</button>
+            <button type="submit" id="location-confirm">Submit</button>
+        </form>
       </div>
-      <div class="search-card" id="sport">
-        <img class="search-pic" id="picSport" src="https://images.unsplash.com/photo-1621274403937-2b169c3ff6df?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=663&q=80">
-        <button class="search-btn" id="btn-sport"></button>
+      <div class="main-body">
+        <div class="music"></div>
+          <img class="search-pic" id="pic-music" src="">
+        <div class="sport"></div>
+          <img class="search-pic" id="pic-sport" src="">
+        <div class="misc"></div>
+          <img class="search-pic" id="pic-misc" src="">
+        <div class="individual"></div>
+          <img class="search-pic" id="pic-individual" src="">
       </div>
-      <div class="search-card" id="misc">
-        <img class="search-pic" id="picMisc" src="https://images.unsplash.com/photo-1621354236791-260eed20cbe9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1952&q=80">
-        <button class="search-btn" id="btn-misc"></button>
-      </div>
-      <div class="search-card" id="individual">
-        <img class="search-pic" id="picIndividual" src="https://images.unsplash.com/photo-1621351557391-a2efa9cf534e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
-        <button class="search-btn" id="btn-individual"></button>
-      </div>
-
+      <div class="sidebar"></div>      
+      <div class="find-location"></div>
     </div>
-  </div>
 
-  <div class="modal" id="modal">
-    <!-- <div class="modal-header"> -->
-    <div class="title">More Event Details
-    <button class="close-button">&times;</button>
-      <!-- <div class="result-overlay"> -->
-      <div class="result-container">
-        <!-- JS Data Input here -->
-        <!-- 
-          ul class="result-card"
-          li class="list-result"
-          id="eventName"
-          id="eventUrl"
-          id="eventDate"
-          id="eventTime"
-          id="venueUrl"
-        -->
+    <div class="modal" id="modal">
+      <!-- <div class="modal-header"> -->
+        <div id="result-container"></div>
       <!-- </div> -->
-      </div>
-    <!-- </div> -->
     </div>
-  </div>
-</body>
+
+    <div id="overlay"></div>
+  </body>
 </html>
