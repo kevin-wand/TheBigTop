@@ -1,4 +1,5 @@
 # The Big Top
+[Deployed Project](https://kevin-wand.github.io/the_big_top/)
 
 ## Description
 User enters a location (Postal Code) and complete search with one button click to find events by category.
