@@ -13,39 +13,47 @@ Technologies used :html: :css: :javascript:
 
   - [Ticketmaster API Docs](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/)
 
-  - Search API Endpoint & Parameters: `events.json?postalCode=10001&classification=music&apikey=${apikey}`
+  - Search API Endpoint & Parameters: `events.json?postalCode=10001&apikey=${apikey}&stateCode=NY&city=new york&classification=music`
 
 ```json
+{
 {
     "_embedded": {
         "events": [
             {
-                "name": "Harry Styles: Love On Tour",
+                "name": "East Conf Qtrs: Hawks at Knicks Rd 1 Hm Gm 1",
                 "type": "event",
-                "id": "G5diZ4M1cQ32n",
+                "id": "G5diZptSF0-2k",
                 "test": false,
-                "url": "https://www.ticketmaster.com/harry-styles-love-on-tour-new-york-new-york-10-03-2021/event/3B005772AD6923EA",
+                "url": "https://www.ticketmaster.com/east-conf-qtrs-hawks-at-knicks-new-york-new-york-05-23-2021/event/3B005A9CC89213C6",
                 "locale": "en-us",
                 "images": [
                     {
                         "ratio": "16_9",
-                        "url": "https://s1.ticketm.net/dam/a/987/76ff7a29-6b21-4ac5-bdf3-d7268760e987_1206471_EVENT_DETAIL_PAGE_16_9.jpg",
-                        "width": 205,
-                        "height": 115,
-                        "fallback": false
-                    },
-                    {
-                        "ratio": "3_2",
-                        "url": "https://s1.ticketm.net/dam/a/987/76ff7a29-6b21-4ac5-bdf3-d7268760e987_1206471_ARTIST_PAGE_3_2.jpg",
-                        "width": 305,
-                        "height": 203,
+                        "url": "https://s1.ticketm.net/dam/a/403/fb1379e0-0c54-4550-a940-81a175dbd403_1339871_RETINA_PORTRAIT_16_9.jpg",
+                        "width": 640,
+                        "height": 360,
                         "fallback": false
                     },
                     {
                         "ratio": "16_9",
-                        "url": "https://s1.ticketm.net/dam/a/987/76ff7a29-6b21-4ac5-bdf3-d7268760e987_1206471_RETINA_LANDSCAPE_16_9.jpg",
-                        "width": 1136,
-                        "height": 639,
+                        "url": "https://s1.ticketm.net/dam/a/403/fb1379e0-0c54-4550-a940-81a175dbd403_1339871_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+                        "width": 2048,
+                        "height": 1152,
+                        "fallback": false
+                    },
+                    {
+                        "ratio": "3_2",
+                        "url": "https://s1.ticketm.net/dam/a/403/fb1379e0-0c54-4550-a940-81a175dbd403_1339871_RETINA_PORTRAIT_3_2.jpg",
+                        "width": 640,
+                        "height": 427,
+                        "fallback": false
+                    },
+                    {
+                        "ratio": "16_9",
+                        "url": "https://s1.ticketm.net/dam/a/403/fb1379e0-0c54-4550-a940-81a175dbd403_1339871_EVENT_DETAIL_PAGE_16_9.jpg",
+                        "width": 205,
+                        "height": 115,
                         "fallback": false
                     },
 ```
@@ -123,7 +131,8 @@ Aesthetic
 
 
 ## Code Snippet
-Enjoyed finding a solution to filter and search for nested data within an array of results
+
+A solution to return specific string values nested within each object within the array.
 
 ```
   attachResults.forEach((result) => {
@@ -140,3 +149,5 @@ Enjoyed finding a solution to filter and search for nested data within an array 
 ```
 
 ## Change Log
+
+- Changed to 4 buttons/categories, provided more consistent and quantifiable results.
