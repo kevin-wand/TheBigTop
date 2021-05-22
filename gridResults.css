@@ -43,7 +43,14 @@
     padding-top: 7px;
     padding-bottom: 7px;
     gap: 10px;
-    transform: translate(-35%, -40%);
+    transform: translate(-50%, -30%);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #result-container {
+    position: absolute;
+    transform: translate(-45%, -35%);
   }
 }
 
